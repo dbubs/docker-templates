@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>owncloud</Name>
+  <Repository>owncloud:latest</Repository>
+  <Registry>https://hub.docker.com/_/owncloud/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Overview/>
+  <Category>Backup: Cloud:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/docker-library/docs/master/owncloud/logo.png</Icon>
+  <ExtraParams>--link mariadb:mysql</ExtraParams>
+  <DateInstalled>1460336080</DateInstalled>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/dockerapps/owncloud/www/</HostDir>
+      <ContainerDir>/var/www/html</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/dockerapps/owncloud/data/</HostDir>
+      <ContainerDir>/var/www/html/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="www" Target="/var/www/html" Default="" Mode="rw" Description="Container Path: /var/www/html" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/dockerapps/owncloud/www/</Config>
+  <Config Name="data" Target="/var/www/html/data" Default="" Mode="rw" Description="Container Path: /var/www/html/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/dockerapps/owncloud/data/</Config>
+</Container>
